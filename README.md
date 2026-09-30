@@ -17,6 +17,8 @@ For a code nobody can see in the project files, set an environment variable `ADM
 - **Gallery:** add many photos at once, remove photos
 - **Schedule & fees:** training days and times, fee names and amounts
 - **Account & contact:** bank name, account number, account name, WhatsApp number, phone, address. Bank details appear on the payment section automatically
+- **Shop:** add products (jerseys, boots, equipment) with price, sizes and photo, and change prices
+- **Orders:** see customer orders and set them to Pending, Confirmed or Delivered
 - **Website:** sentence under the team photo, and the team photo itself
 - **Security:** change the admin code
 
@@ -34,3 +36,15 @@ If you prefer the command line: `npm i -g netlify-cli`, then `netlify deploy --p
 - Card payments are not included yet. Payments are bank transfer or cash and you confirm them in admin. Paystack or Flutterwave can be added later.
 - The admin code is checked on the server, but there is no lock-out after wrong tries. Use a long code.
 - Names, phone numbers and player ages of children are stored. Keep the admin code private.
+
+## Shop
+All shop orders show **Free delivery**. Add products, prices, sizes and photos in Admin > Shop, and follow orders in Admin > Orders (Pending, Confirmed, Delivered). Sample products and prices are placeholders, so replace them with yours.
+
+## Master admin and staff
+- **Master admin:** logs in with the admin code and can do everything (bank details, fees, prices, team photo, codes, removing players).
+- **Staff:** anyone can tap the club badge in the website footer 5 times to reach the login page. A staff member enters the **staff code**, not the admin code.
+- The master sets the staff code and chooses what staff can do in Admin > Security > Staff access: see and recruit players, confirm payments, update shop orders, post news, add gallery photos.
+- Staff can never change bank details, fees, prices, the team photo or codes, and cannot remove players. Staff access is off until the master sets a staff code.
+
+## Promo prices
+In Admin > Shop, fill the **Old price** box for any product. The shop then shows the old price crossed out, the new price beside it, and a red percentage badge (for example the jersey: ₦25,000 crossed out, now ₦15,000, -40%). Empty the Old price box to end the promo.
